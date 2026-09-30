@@ -54,6 +54,8 @@ function displayLibrary () {
         libraryContainer.appendChild(bookCard);
     })
 
+    const deleteButtons = document.querySelectorAll(".delete-btn");
+    
     deleteButtons.forEach(button => {
         button.addEventListener("click", () => {
             const id = button.dataset.id;
@@ -62,7 +64,7 @@ function displayLibrary () {
 
             myLibrary.splice(index, 1);
 
-            displayBooks();
+            displayLibrary();
         });
     });   
 }
