@@ -19,7 +19,7 @@ function addBook () {
 
 }
 
-function displayLibrary () {
+function displayLibrary() {
     const libraryContainer = document.getElementById("library-container");
 
     libraryContainer.textContent = "";
@@ -27,31 +27,49 @@ function displayLibrary () {
     myLibrary.forEach(book => {
         const bookCard = document.createElement("div");
 
-        bookCard.innerHTML = `
-            <h2>${book.title}</h2>
-            <p>${book.author}</p>
-            <p>${book.pages}</p>
-            <p>${book.read ? "Read" : "Not read yet"}</p>
-            <button class="delete-btn" data-id="${book.id}">Delete</button>
-        `;
+        const title = document.createElement("h2");
+        title.textContent = book.title;
+
+        const author = document.createElement("p");
+        author.textContent = book.author;
+
+        const pages = document.createElement("p");
+        pages.textContent = book.pages;
+
+        const read = document.createElement("p");
+        read.textContent = book.read ? "Read" : "Not read yet";
+
+        const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delete-btn");
+        deleteButton.textContent = "Delete";
+        deleteButton.dataset.id = book.id;
+
+        bookCard.appendChild(title);
+        bookCard.appendChild(author);
+        bookCard.appendChild(pages);
+        bookCard.appendChild(read);
+        bookCard.appendChild(deleteButton);
 
         libraryContainer.appendChild(bookCard);
-    })
+    });
 
     const deleteButtons = document.querySelectorAll(".delete-btn");
-    
+
     deleteButtons.forEach(button => {
         button.addEventListener("click", () => {
             const id = button.dataset.id;
 
             const index = myLibrary.findIndex(book => book.id === id);
 
-            myLibrary.splice(index, 1);
+            if (index !== -1) {
+                myLibrary.splice(index, 1);
+            }
 
             displayLibrary();
         });
-    });   
+    });
 }
+
 
 displayLibrary();
 
