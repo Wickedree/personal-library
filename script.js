@@ -6,32 +6,18 @@ function Book (title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    /*this.info = function () {
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
-    };*/
 }
 
 function addBook () {
-    /*let bookTitle = document.getElementById();
-    let bookAuthor = document.getElementById();
-    let bookPages = document.getElementById();
-    let bookRead = document.getElementById();*/
+    let bookTitle = document.getElementById("title").value;
+    let bookAuthor = document.getElementById("author").value;
+    let bookPages = document.getElementById("pages").value;
+    let bookRead = document.getElementById("read").value;
 
-    //let newBook = new Book(bookTitle, bookAuthor, bookPages, bookRead);
-    //myLibrary.push(newBook)
+    let newBook = new Book(bookTitle, bookAuthor, bookPages, bookRead);
+    myLibrary.push(newBook)
 
-    //LET'S MANUALLY ADD A FEW BOOKS
-    let firstBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "not read yet");
-    let secondBook = new Book("1984", "George Orwell", 328, "read");
-    let thirdBook = new Book("Dune", "Frank Herbert", 688, "not read yet")
-    
-    myLibrary.push(firstBook)
-    myLibrary.push(secondBook)
-    myLibrary.push(thirdBook)
 }
-
-addBook()
-console.log(myLibrary);
 
 function displayLibrary () {
     const libraryContainer = document.getElementById("library-container");
@@ -41,13 +27,11 @@ function displayLibrary () {
     myLibrary.forEach(book => {
         const bookCard = document.createElement("div");
 
-        bookCard.textContent = "Book!";
-
         bookCard.innerHTML = `
-            ${book.title}
-            ${book.author}
-            ${book.pages}
-            ${book.read}
+            <h2>${book.title}</h2>
+            <p>${book.author}</p>
+            <p>${book.pages}</p>
+            <p>${book.read}</p>
             <button class="delete-btn" data-id="${book.id}">Delete</button>
         `;
 
@@ -84,3 +68,11 @@ function closeAddBookForm() {
     addBookForm.close()
 }
 
+
+addBookForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    addBook();
+    displayLibrary();
+    addBookForm.close();
+});
