@@ -124,7 +124,48 @@ body {
     color: var(--dark-chocolate);
 }
 
+/*MODAL*/
+#add-book-form {
+    margin: 12em auto;
+    width: 40%;
+    padding: 2em;
+    border: solid var(--light-brown) 5px;
+    background-color: var(--gold);
+    border-radius: 20px;
+}
+
+.add-book-form-title {
+    color: var(--dark-chocolate);
+    font-family: "IM Fell English SC", serif;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.text-label {
+    font-family: "Cormorant Garamond", serif;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.text-input {
+    border: none;
+    border-radius: 10px;
+    padding: 0.6em 0.9em;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
 /*TOOGLE*/
+.form-center-items-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 .read-status-toogle {
     display: none;
@@ -163,3 +204,40 @@ body {
 .read-status-toogle:checked + .read-toogle-container::before {
    left: 50%;
 }
+
+
+/*FINAL BTNS CONTAINER*/
+
+.add-book-form-final-btn-container {
+    display: flex;
+    gap: 1.5em;
+    justify-content: space-evenly;
+    margin-top: 1.5em;
+}
+
+.final-add-book-btn {
+    background-color: var(--cream);
+    border: none;
+    color: var(--dark-chocolate);
+    padding: 0.5em 1.5em;
+    border-radius: 15px;
+}
+
+.final-add-book-btn:hover {
+    cursor: pointer;
+    background-color: var(--light-brown);
+}
+
+.cancel-add-book-btn {
+    background-color: var(--rouge);
+    border: none;
+    color: var(--cream);
+    padding: 0.5em 1.5em;
+    border-radius: 15px;
+}
+
+.cancel-add-book-btn:hover {
+    cursor: pointer;
+    background-color: var(--dark-chocolate);
+}
+
