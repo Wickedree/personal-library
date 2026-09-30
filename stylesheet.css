@@ -142,9 +142,10 @@ body {
 }
 
 .text-label {
-    font-family: "Cormorant Garamond", serif;
+    font-family: "IM Fell English SC", serif;
     width: 100%;
     text-transform: uppercase;
+    color: var(--cream);
 }
 
 .text-input {
@@ -157,6 +158,9 @@ body {
 
 .text-input:focus {
     outline: none;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    color: var(--dark-chocolate);
 }
 
 /*TOOGLE*/
