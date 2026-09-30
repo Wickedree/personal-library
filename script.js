@@ -32,3 +32,28 @@ function addBook () {
 
 addBook()
 console.log(myLibrary);
+
+function displayLibrary () {
+    const libraryContainer = document.getElementById("library-container");
+
+    libraryContainer.innerHTML = "";
+
+    myLibrary.forEach(book => {
+        const bookCard = document.createElement("div");
+
+        bookCard.innerHTML = "Book!";
+
+        /*bookCard.textContent = `
+            <h2>${book.title}</h2>
+            <p>Author: ${book.author}</p>
+            <p>Pages: ${book.pages}</p>
+            <p>Status: ${book.read}</p>
+        `;*/
+
+        libraryContainer.appendChild(bookCard);
+    })
+}
+
+displayLibrary();
+
+
