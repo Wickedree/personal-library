@@ -8,7 +8,26 @@
 </head>
 <body>
     <h1>My Library</h1>
-    <button type="submit">Add Book</button>
+    <button onclick="showAddBookFormModal()">New Book</button>
+    <dialog id="add-book-form">
+         <h2>Add a Book!</h2>
+         <form>
+            <label for="title">Title</label>
+            <input id="title" name="title">
+
+            <label for="author">Author</label>
+            <input id="author" name="author">
+
+            <label for="pages">Pages</label>
+            <input id="pages" name="pages">
+
+            <!--<label for="read">Status</label>
+            <input  id="read" name="read">-->
+
+            <button type="submit">Add Book</button>
+            <button onClick="closeAddBookForm()" type="button">Cancel</button>
+         </form>
+    </dialog>
     <div id="library-container"></div>
     <script src="script.js"></script>
 </body>

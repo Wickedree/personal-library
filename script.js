@@ -36,19 +36,19 @@ console.log(myLibrary);
 function displayLibrary () {
     const libraryContainer = document.getElementById("library-container");
 
-    libraryContainer.innerHTML = "";
+    libraryContainer.textContent = "";
 
     myLibrary.forEach(book => {
         const bookCard = document.createElement("div");
 
-        bookCard.innerHTML = "Book!";
+        bookCard.textContent = "Book!";
 
-        /*bookCard.textContent = `
-            <h2>${book.title}</h2>
-            <p>Author: ${book.author}</p>
-            <p>Pages: ${book.pages}</p>
-            <p>Status: ${book.read}</p>
-        `;*/
+        bookCard.textContent = `
+            ${book.title}
+            ${book.author}
+            ${book.pages}
+            ${book.read}
+        `;
 
         libraryContainer.appendChild(bookCard);
     })
@@ -56,4 +56,14 @@ function displayLibrary () {
 
 displayLibrary();
 
+const addBookForm = document.getElementById("add-book-form");
+
+function showAddBookFormModal() {
+    addBookForm.showModal()
+}
+
+
+function closeAddBookForm() {
+    addBookForm.close()
+}
 
