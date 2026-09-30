@@ -37,16 +37,18 @@ function displayLibrary() {
         author.classList.add("book-author");
 
         const pages = document.createElement("p");
-        pages.textContent = book.pages;
+        pages.textContent = `${book.pages} pages`;
         pages.classList.add("book-pages");
 
         const read = document.createElement("p");
         read.textContent = book.read ? "Read" : "Not read yet";
+        read.classList.add("read-status");
 
         const deleteButton = document.createElement("button");
         deleteButton.classList.add("delete-btn");
         deleteButton.textContent = "Delete";
         deleteButton.dataset.id = book.id;
+        deleteButton.classList.add("delete-book-btn")
 
         bookCard.appendChild(title);
         bookCard.appendChild(author);
