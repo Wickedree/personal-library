@@ -58,6 +58,7 @@ displayLibrary();
 
 //ADD BOOK FORM
 const addBookForm = document.getElementById("add-book-form");
+const bookForm = document.getElementById("book-form");
 
 function showAddBookFormModal() {
     addBookForm.showModal()
@@ -75,6 +76,6 @@ addBookForm.addEventListener("submit", (event) => {
     addBook();
     displayLibrary();
 
-    addBookForm.reset();
+    bookForm.reset();
     addBookForm.close();
 });
