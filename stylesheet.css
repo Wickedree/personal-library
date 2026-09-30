@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --dark-chocolate: #3D2300;
+    --rouge: #340700;
+    --chocolate: #4E1B00;
+    --light-brown: #804527;
+    --gold: #B97921;
+    --cream: #FFE9B6;
+}
 
 
 
