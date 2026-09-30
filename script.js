@@ -12,7 +12,7 @@ function addBook () {
     let bookTitle = document.getElementById("title").value;
     let bookAuthor = document.getElementById("author").value;
     let bookPages = document.getElementById("pages").value;
-    let bookRead = document.getElementById("read").value;
+    let bookRead = document.getElementById("read").checked;
 
     let newBook = new Book(bookTitle, bookAuthor, bookPages, bookRead);
     myLibrary.push(newBook)
@@ -31,7 +31,7 @@ function displayLibrary () {
             <h2>${book.title}</h2>
             <p>${book.author}</p>
             <p>${book.pages}</p>
-            <p>${book.read}</p>
+            <p>${book.read ? "Read" : "Not read yet"}</p>
             <button class="delete-btn" data-id="${book.id}">Delete</button>
         `;
 
@@ -74,5 +74,7 @@ addBookForm.addEventListener("submit", (event) => {
 
     addBook();
     displayLibrary();
+
+    addBookForm.reset();
     addBookForm.close();
 });

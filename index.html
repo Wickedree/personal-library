@@ -13,16 +13,19 @@
          <h2>Add a Book!</h2>
          <form>
             <label for="title">Title</label>
-            <input id="title" name="title">
+            <input type="text" id="title" name="title">
 
             <label for="author">Author</label>
-            <input id="author" name="author">
+            <input type="text" id="author" name="author">
 
             <label for="pages">Pages</label>
-            <input id="pages" name="pages">
+            <input type="text" id="pages" name="pages">
 
-            <!--<label for="read">Status</label>
-            <input  id="read" name="read">-->
+            <input type="checkbox" class="read-status-toogle" id="read" name="read">
+            <label for="read" class="read-toogle-container">
+                <div class="toogle-item">Read</div> 
+                <div class="toogle-item">Not read yet</div>
+            </label>
 
             <button type="submit">Add Book</button>
             <button onClick="closeAddBookForm()" type="button">Cancel</button>
