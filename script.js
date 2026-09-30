@@ -43,19 +43,34 @@ function displayLibrary () {
 
         bookCard.textContent = "Book!";
 
-        bookCard.textContent = `
+        bookCard.innerHTML = `
             ${book.title}
             ${book.author}
             ${book.pages}
             ${book.read}
+            <button class="delete-btn" data-id="${book.id}">Delete</button>
         `;
 
         libraryContainer.appendChild(bookCard);
     })
+
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const id = button.dataset.id;
+
+            const index = myLibrary.findIndex(book => book.id === id);
+
+            myLibrary.splice(index, 1);
+
+            displayBooks();
+        });
+    });   
 }
 
 displayLibrary();
 
+
+//ADD BOOK FORM
 const addBookForm = document.getElementById("add-book-form");
 
 function showAddBookFormModal() {
