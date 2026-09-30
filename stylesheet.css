@@ -13,6 +13,37 @@
     --cream: #FFE9B6;
 }
 
+body {
+    background-color: var(--dark-chocolate);
+}
+
+.page-title {
+    text-align: center;
+    font-family: "UnifrakturCook", cursive;
+    color: var(--gold);
+    font-size: 4em;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-family: "IM Fell English SC", serif;
+    font-size: 2.5em;
+    color: var(--light-brown);
+}
+
+.page-intro {
+     text-align: center;
+     font-family: "Cormorant Garamond", serif;
+     font-size: 1.2em;
+     margin: 0 auto;
+     width: 60%;
+     color: var(--cream);
+}
+
+.page-intro::first-letter {
+     text-transform: uppercase;
+     font-size: 2em;
+}
 
 
 .read-status-toogle {
