@@ -70,6 +70,61 @@ body {
     color: var(--cream);
 }
 
+/*LIBRARY BOOKS CONTAINER*/
+#library-container {
+    display: flex;
+    gap: 1.5em;
+    margin: 0 auto;
+    width: 70%;
+    flex-direction: column;
+}
+
+.book-card {
+    background-color: var(--light-brown);
+    border-radius: 15px;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.book-title {
+    font-family: "IM Fell English SC", serif;
+    color: var(--cream);
+}
+
+.book-author {
+   font-family: "IM Fell English SC", serif;
+   color: var(--dark-chocolate);
+}
+
+.book-pages {
+   font-family: "Cormorant Garamond", serif;
+   color: var(--cream);
+}
+
+.read-status {
+    font-family: "Cormorant Garamond", serif;
+    color: var(--cream);
+}
+
+.delete-book-btn {
+    background-color: var(--rouge);
+    color: var(--cream);
+    font-family: "Cormorant Garamond", serif;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    border: none;
+}
+
+.delete-book-btn:hover {
+    cursor: pointer;
+    background-color: var(--gold);
+    color: var(--dark-chocolate);
+}
+
+/*TOOGLE*/
 
 .read-status-toogle {
     display: none;
