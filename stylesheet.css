@@ -45,6 +45,31 @@ body {
      font-size: 2em;
 }
 
+.add-new-book-btn-container {
+    display: flex;
+    align-items: center;
+    padding: 1.5em;
+}
+
+.add-new-book-btn {
+    margin: 0 auto;
+    border-radius: 18px;
+    padding: 0.5em 1em;
+    border: solid var(--cream) 1px;
+    background-color: var(--gold);
+    color: var(--chocolate);
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.2em;
+    box-shadow: 0 0 5px var(--gold);
+}
+
+.add-new-book-btn:hover {
+    cursor: pointer;
+    background-color: var(--chocolate);
+    box-shadow: 0 0 5px var(--chocolate);
+    color: var(--cream);
+}
+
 
 .read-status-toogle {
     display: none;
