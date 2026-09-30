@@ -26,15 +26,19 @@ function displayLibrary() {
 
     myLibrary.forEach(book => {
         const bookCard = document.createElement("div");
+        bookCard.classList.add("book-card");
 
         const title = document.createElement("h2");
         title.textContent = book.title;
+        title.classList.add("book-title");
 
         const author = document.createElement("p");
         author.textContent = book.author;
+        author.classList.add("book-author");
 
         const pages = document.createElement("p");
         pages.textContent = book.pages;
+        pages.classList.add("book-pages");
 
         const read = document.createElement("p");
         read.textContent = book.read ? "Read" : "Not read yet";
