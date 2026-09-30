@@ -11,27 +11,34 @@
     <h1 class="page-title">The Midnight Archive</h1>
     <p class="page-subtitle">My personal library</p>
     <p class="page-intro">A quiet sanctuary for forgotten stories, worn pages, and thoughts that linger long after the candle burns low. Here, among the dust and shadows, every book keeps a secret—and every reader is invited to uncover it.</p>
-    <button onclick="showAddBookFormModal()">New Book</button>
+     <div class="add-new-book-btn-container">
+         <button onclick="showAddBookFormModal()" class="add-new-book-btn">New Book</button>
+    </div>
+
     <dialog id="add-book-form">
-         <h2>Add a Book!</h2>
+         <h2 class="add-book-form-title">Add a Book!</h2>
          <form id="book-form">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title">
+            <label for="title" class="text-label">Title</label>
+            <input type="text" id="title" name="title" class="text-input">
 
-            <label for="author">Author</label>
-            <input type="text" id="author" name="author">
+            <label for="author" class="text-label">Author</label>
+            <input type="text" id="author" name="author" class="text-input">
 
-            <label for="pages">Pages</label>
-            <input type="text" id="pages" name="pages">
+            <label for="pages" class="text-label">Pages</label>
+            <input type="text" id="pages" name="pages" class="text-input">
 
-            <input type="checkbox" class="read-status-toogle" id="read" name="read">
-            <label for="read" class="read-toogle-container">
-                <div class="toogle-item">Read</div> 
-                <div class="toogle-item">Not read yet</div>
-            </label>
-
-            <button type="submit">Add Book</button>
-            <button onClick="closeAddBookForm()" type="button">Cancel</button>
+            <div class="form-center-items-container">
+                 <input type="checkbox" class="read-status-toogle" id="read" name="read">
+                 <label for="read" class="read-toogle-container">
+                     <div class="toogle-item">Read</div> 
+                     <div class="toogle-item">Not read yet</div>
+                 </label>
+                 
+                 <div class="add-book-form-final-btn-container">
+                     <button type="submit" class="final-add-book-btn">Add Book</button>
+                     <button onClick="closeAddBookForm()" type="button" class="cancel-add-book-btn">Cancel</button>
+                 </div>
+            </div>
          </form>
     </dialog>
     <div id="library-container"></div>
